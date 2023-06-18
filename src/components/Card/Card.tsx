@@ -1,5 +1,6 @@
 import {type FC} from 'react';
 import AddPlaylist from '../AddPlaylist';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 import classes from './Card.module.scss';
 
@@ -9,12 +10,7 @@ const Card: FC<{item: ItemType}> = ({item}) => {
   return (
     <div className={classes.container}>
       <div className={classes.imageContainer}>
-        <img
-          src={item.image}
-          width={100}
-          height={100}
-          className={classes.image}
-        />
+        <LazyLoadImage src={item.image} className={classes.image} />
         <AddPlaylist item={item} />
       </div>
       <div className={classes.content}>
