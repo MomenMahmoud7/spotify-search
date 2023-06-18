@@ -29,19 +29,28 @@
     display: none; /* Safari and Chrome */
   }
   .playlist {
-    cursor: pointer;
+    position: relative;
     display: flex;
     align-items: center;
     flex-shrink: 0;
     width: 20%;
-    border: 0;
-    outline: 0;
     padding: 1rem;
     color: white;
     border-radius: 0.5rem;
     margin-inline-end: 1rem;
     transition: all 0.3s;
     background-color: rgba(255, 255, 255, 0.05);
+    .hidden {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+    }
     &:hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
@@ -112,6 +121,7 @@
 }
 
 .button {
+  z-index: 10;
   cursor: pointer;
   display: flex;
   align-items: center;

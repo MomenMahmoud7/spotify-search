@@ -1,7 +1,7 @@
-import { type MouseEvent, type ChangeEvent, type FC } from "react";
-import { FiPlus } from "react-icons/fi";
+import {type MouseEvent, type ChangeEvent, type FC} from 'react';
+import {FiPlus} from 'react-icons/fi';
 
-import classes from "./CreatePlaylist.module.scss";
+import classes from './CreatePlaylist.module.scss';
 
 interface CreatePlaylistPropsType {
   playlistName: string;

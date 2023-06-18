@@ -45,20 +45,22 @@ const Playlists = () => {
       </header>
       <header className={classes.playlists}>
         {playlists.map(playlist => (
-          <button
+          <div
             key={playlist.name}
-            onClick={selectPlaylist(playlist.name)}
             className={`
               ${classes.playlist}
               ${playlist.name === selectedPlaylist ? classes.selected : ''}
             `}>
             <p className={classes.title}>{playlist.name}</p>
             <button
+              className={classes.hidden}
+              onClick={selectPlaylist(playlist.name)}></button>
+            <button
               className={classes.button}
               onClick={removePlaylist(playlist.name)}>
               <IoMdClose />
             </button>
-          </button>
+          </div>
         ))}
       </header>
       {playlists.length === 0 ? (
