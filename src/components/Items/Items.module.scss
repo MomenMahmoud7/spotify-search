@@ -1,0 +1,15 @@
+.content {
+  display: grid;
+  gap: 1rem;
+  flex-grow: 1;
+  overflow-y: scroll;
+  margin-inline: 4rem;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}

@@ -1,0 +1,16 @@
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .icon {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .text {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

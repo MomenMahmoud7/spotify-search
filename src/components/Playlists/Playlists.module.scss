@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 5rem;
+    margin-block: 2rem;
+    .logo {
+      align-self: center;
+      height: 3rem;
+      margin-inline-end: 2rem;
+    }
+  }
+}
+
+.playlists {
+  display: flex;
+  overflow-x: scroll;
+  flex-shrink: 0;
+  padding-inline-start: 6rem;
+  padding-inline-end: 5rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  .playlist {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 20%;
+    border: 0;
+    outline: 0;
+    padding: 1rem;
+    color: white;
+    border-radius: 0.5rem;
+    margin-inline-end: 1rem;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.05);
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+  .selected {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+.title {
+  margin: 0;
+  margin: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-block: 2rem;
+  margin-inline: 5rem;
+  border-radius: 1rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  .items {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      color: white;
+      margin-block-end: 1rem;
+      padding: 0.5rem;
+      padding-inline-end: 1.5rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s;
+      background-color: rgba(255, 255, 255, 0.05);
+      .imageContainer {
+        position: relative;
+        width: 80%;
+        height: 10rem;
+        padding: 10%;
+        border-radius: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.02);
+      }
+      .image {
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        padding: 0.5rem;
+        object-fit: contain;
+        border-radius: 0.5rem;
+        margin-inline-end: 1rem;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  margin-inline-start: auto;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: color 0.1s, background-color 0.1s;
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 0, 0, 0.35);
+  }
+}

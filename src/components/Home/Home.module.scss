@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  .header {
+    display: flex;
+    margin-inline: 5rem;
+    margin-block: 2rem;
+    .logo {
+      align-self: center;
+      height: 3rem;
+      margin-inline-end: 2rem;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding-inline: 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  margin-inline-start: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.02);
+  &:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+.input {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  border-radius: 2rem;
+  padding-inline: 3.25rem;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.05);
+  input {
+    display: flex;
+    flex-grow: 1;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    color: white;
+    font-size: 1rem;
+    padding-block: 1rem;
+    background-color: transparent;
+  }
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    color: white;
+    transform: translateY(-50%);
+  }
+  &:has(input:hover) {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &:has(input:focus) {
+    border-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
